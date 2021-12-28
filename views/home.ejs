@@ -6,8 +6,12 @@
 
 <div class="all-posts">
     <% posts.forEach(function (post) { %>
-        <h3 class="post-title"><%=post.title%></h3>
-        <p class="post-content"><%=post.content%></p>
+        <h3 class="post-title">
+            <%=post.title%>
+        </h3>
+        <p class="post-content"><%=post.content.substring(0, 100) + " ..."%>
+            <a href="posts/<%=post.title%>">Read more</a>
+        </p>
         <hr />
     <% }) %>
 </div>
